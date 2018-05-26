@@ -1,0 +1,31 @@
+include mixins
+doctype
+html(lang="es")
+    head
+        title= titulo
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+
+    body(style="padding-bottom:10rem;")  	
+        .container
+            script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+            script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
+            +nav("MC EX-MA", "dropdown_menu")
+                +nav_item("/", active) Home
+                +nav_item("2") VAPORWAVE
+                +nav_item("3") AESTHETHIC
+            .jumbotron
+                h1= tituloJumbotron
+                p= textoJumbotron
+            .row
+                .col-md-4.col-sm-6.col-xs-12
+                    +panel("Panel Heading","danger")
+                        p= contenidoPanel1
+                .col-md-4.col-sm-6.col-xs-12
+                    +panel("Panel Heading","danger")
+                        p= contenidoPanel2
+                .col-md-4.col-sm-6.col-xs-12
+                    +panel("Panel Heading","danger")
+                        p= contenidoPanel3
